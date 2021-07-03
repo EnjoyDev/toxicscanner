@@ -9,10 +9,11 @@
 
     <TextView
         android:id="@+id/fragment_success_text_view_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="309dp"
+        android:layout_height="79dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/success_title"
+        android:textAlignment="center"
         android:textColor="#2d2d2d"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/fragment_success_text_view_code"
@@ -23,10 +24,11 @@
 
     <TextView
         android:id="@+id/fragment_success_text_view_code"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="264dp"
+        android:layout_height="133dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="?attr/colorPrimary"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,15 +38,16 @@
 
     <TextView
         android:id="@+id/resultscan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="306dp"
+        android:layout_height="129dp"
         android:fontFamily="sans-serif-condensed-medium"
-        android:textColor="?attr/colorPrimary"
+        android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_success_text_view_title"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_success_text_view_code"
         app:layout_constraintVertical_bias="0.115"
         tools:text="resultat" />
 
