@@ -147,9 +147,8 @@ class ScanBarcodeFragment : Fragment() {
 
         var res = false
 
-        //TODO comparer avec csv
         try {
-            val `is` = InputStreamReader(context?.getAssets()?.open("toxic.csv"))
+            val `is` = InputStreamReader(context?.assets?.open("toxic.csv"))
             val reader = BufferedReader(`is`)
             reader.readLine()
             var line: String?
