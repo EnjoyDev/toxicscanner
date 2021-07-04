@@ -8,8 +8,8 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
 
-class ProductItemAdapter(private val application: Application,
-                         private val dataSource: List<ProductData>) : BaseAdapter()
+class ProductItemAdapter(application: Application,
+                         dataSource: List<ProductData>) : BaseAdapter()
 {
     private val inflater: LayoutInflater
             = application.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
