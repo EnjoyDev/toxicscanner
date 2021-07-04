@@ -8,12 +8,14 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.Toast
 import androidx.camera.core.*
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import kotlinx.android.synthetic.main.fragment_scan_barcode.*
 import kotlinx.android.synthetic.main.fragment_scan_barcode.view.*
@@ -57,8 +59,15 @@ class ScanBarcodeFragment : Fragment() {
             }
         })
 
+        val button : Button = v.fragment_scan_barcode_open_list;
+        button.setOnClickListener { view ->
+            view.findNavController().navigate(R.id.list_products_destination)
+        };
+
         return v
     }
+
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -178,4 +187,6 @@ class ScanBarcodeFragment : Fragment() {
         private val REQUIRED_PERMISSIONS = arrayOf(CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
     }
+
+
 }

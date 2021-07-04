@@ -29,6 +29,13 @@
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/scan_destination_to_list_destination"
+            app:destination="@id/list_products_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
     </fragment>
 
     <fragment
@@ -47,6 +54,21 @@
         <action
             android:id="@+id/success_destination_to_scan_destination"
             app:destination="@id/scan_destination"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/list_products_destination"
+        android:name="com.blackfrogweb.toxicscanner.ProductListFragment"
+        android:label="ProductList"
+        tools:layout="@layout/fragment_scan_barcode">
+
+        <action
+            android:id="@+id/scan_destination_to_list_destination"
+            app:destination="@id/list_products_destination"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
