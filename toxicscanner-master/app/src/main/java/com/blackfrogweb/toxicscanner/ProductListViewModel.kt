@@ -18,13 +18,12 @@ class ProductListViewModel(application: Application) : AndroidViewModel(applicat
             reader.readLine()
             var line: String?
 
-            val i = 0
             while (reader.readLine().also { line = it } != null)
             {
                 val parts = line!!.split( ',')
                 if(parts.size > 4)
                 {
-                    val pdtData = ProductData(parts[0], parts[1], parts[2], Date())
+                    val pdtData = ProductData(parts[0], parts[1], parts[2], parts[3])
                     productList.add(pdtData)
                 }
             }
@@ -38,5 +37,5 @@ class ProductListViewModel(application: Application) : AndroidViewModel(applicat
 
     private val productList : List<ProductData> = buildProductList()
 
-    public val productAdapter : ProductItemAdapter = ProductItemAdapter(application, productList)
+    val productAdapter : ProductItemAdapter = ProductItemAdapter(application, productList)
 }
