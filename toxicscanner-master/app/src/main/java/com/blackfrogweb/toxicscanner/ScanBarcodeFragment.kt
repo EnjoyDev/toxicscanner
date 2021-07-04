@@ -59,10 +59,10 @@ class ScanBarcodeFragment : Fragment() {
             }
         })
 
-        val button : Button = v.fragment_scan_barcode_open_list;
+        val button : Button = v.fragment_scan_barcode_open_list
         button.setOnClickListener { view ->
             view.findNavController().navigate(R.id.list_products_destination)
-        };
+        }
 
         return v
     }
@@ -156,9 +156,8 @@ class ScanBarcodeFragment : Fragment() {
 
         var res = false
 
-        //TODO comparer avec csv
         try {
-            val `is` = InputStreamReader(context?.getAssets()?.open("toxic.csv"))
+            val `is` = InputStreamReader(context?.assets?.open("toxic.csv"))
             val reader = BufferedReader(`is`)
             reader.readLine()
             var line: String?
