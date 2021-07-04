@@ -4,17 +4,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ProductListFragment">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
         <ListView
             android:id="@+id/productList_listview"
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
-        
-    </LinearLayout>
-
+            android:layout_height="match_parent"
+            android:layout_margin="2dp"/>
 </FrameLayout>

@@ -4,28 +4,34 @@
     android:id="@+id/activity_main_nav_host_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-
-    <LinearLayout
-        android:background="@color/black"
+    <androidx.camera.view.PreviewView
+        android:id="@+id/fragment_scan_barcode_preview_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/black"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
         android:orientation="vertical">
-        <androidx.camera.view.PreviewView
-            android:id="@+id/fragment_scan_barcode_preview_view"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"/>
         <Button
             android:id="@+id/fragment_scan_barcode_scan_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="Scan Product"/>
         <Button
             android:id="@+id/fragment_scan_barcode_open_list"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:text="product list"/>
     </LinearLayout>
 

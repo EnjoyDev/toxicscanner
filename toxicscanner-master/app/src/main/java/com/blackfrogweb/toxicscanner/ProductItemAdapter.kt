@@ -37,8 +37,10 @@ class ProductItemAdapter(application: Application,
             labelTextView.text = item.label
             val cbTextView = rowView.findViewById(R.id.textView_productItem_cb) as TextView
             cbTextView.text = item.barcode
-            val batchTextView = rowView.findViewById(R.id.textView_productItem_batch) as TextView
+            val batchTextView: TextView = rowView.findViewById(R.id.textView_productItem_batch)
             batchTextView.text = item.batch
+            val dateTextView: TextView = rowView.findViewById(R.id.textView_productItem_date)
+            dateTextView.text = item.endDate
             return rowView
         }
 

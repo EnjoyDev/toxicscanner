@@ -58,4 +58,7 @@ dependencies {
 
     // MLKit
     implementation 'com.google.mlkit:barcode-scanning:16.0.3'
+
+    // CSV
+    implementation 'com.opencsv:opencsv:4.6'
 }
