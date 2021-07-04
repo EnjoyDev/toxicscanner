@@ -17,7 +17,6 @@ class ProductListViewModel(application: Application) : AndroidViewModel(applicat
             val reader = BufferedReader(`is`)
             reader.readLine()
             var line: String?
-
             while (reader.readLine().also { line = it } != null)
             {
                 val parts = line!!.split( ',')
@@ -33,6 +32,11 @@ class ProductListViewModel(application: Application) : AndroidViewModel(applicat
             e.printStackTrace()
         }
         return productList.toList()
+    }
+
+    fun searchProduct( barcode : String) : ProductData?
+    {
+        return productList.find { pdt -> pdt.barcode == barcode}
     }
 
     private val productList : List<ProductData> = buildProductList()
