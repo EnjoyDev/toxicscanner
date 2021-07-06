@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
 import android.widget.TextView
+import kotlinx.android.synthetic.main.list_item_product.view.*
 
 class ProductItemAdapter(application: Application,
                          dataSource: List<ProductData>) : BaseAdapter()
@@ -32,15 +33,14 @@ class ProductItemAdapter(application: Application,
         View
         {
             val item = getItem(position) as ProductData
-            val rowView = inflater.inflate(R.layout.list_item_product, parent, false)
+            val rowView = convertView?: inflater.inflate(R.layout.list_item_product, parent, false)
             val labelTextView = rowView.findViewById(R.id.textView_productItem_label) as TextView
             labelTextView.text = item.label
             val cbTextView = rowView.findViewById(R.id.textView_productItem_cb) as TextView
             cbTextView.text = item.barcode
-            val batchTextView: TextView = rowView.findViewById(R.id.textView_productItem_batch)
-            batchTextView.text = item.batch
-            val dateTextView: TextView = rowView.findViewById(R.id.textView_productItem_date)
-            dateTextView.text = item.endDate
+            rowView.textView_productItem_batch.text = item.batch
+            rowView.textView_productItem_date.text = item.endDate
+            rowView.textView_productItem_brand.text = item.brand
             return rowView
         }
 

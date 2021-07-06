@@ -153,9 +153,7 @@ class ScanBarcodeFragment : Fragment() {
     }
 
     private fun searchBarcode(barcode: String) {
-
         var res = false
-
         try {
             val `is` = InputStreamReader(context?.assets?.open("toxic.csv"))
             val reader = BufferedReader(`is`)
@@ -165,16 +163,13 @@ class ScanBarcodeFragment : Fragment() {
                 if(line?.contains(barcode) == true) {
                     Log.println(Log.DEBUG, "OK", "GOTCHAAAAAAAAAAAAAAAAAAAAAA")
                     res = true
-
                 }
-
             }
         } catch (e: IOException) {
             e.printStackTrace()
         }
 
         scanBarcodeViewModel.searchBarcode(barcode,res)
-
     }
 
     override fun onDestroy() {
