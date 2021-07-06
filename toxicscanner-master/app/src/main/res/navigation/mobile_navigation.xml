@@ -47,9 +47,6 @@
         <argument
             android:name="code"
             app:argType="string"/>
-        <argument
-            android:name="result"
-            app:argType="boolean"/>
 
         <action
             android:id="@+id/success_destination_to_scan_destination"

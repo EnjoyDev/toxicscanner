@@ -22,9 +22,9 @@ class ProductList private constructor(context: Context)
         }
     }
 
-    fun searchProduct( barcode : String) : ProductData?
+    fun searchProduct( barcode : String) : List<ProductData>
     {
-        return list.find { pdt -> pdt.barcode == barcode}
+        return list.filter { pdt -> pdt.barcode == barcode }
     }
 
     private fun buildProductList(context : Context) : List<ProductData>

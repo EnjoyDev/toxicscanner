@@ -8,7 +8,7 @@
     android:background="#E9EBFF">
 
     <TextView
-        android:id="@+id/fragment_success_text_view_title"
+        android:id="@+id/fragment_success_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-light"
@@ -31,11 +31,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_success_text_view_title"
-        tools:text="1234567890000" />
+        app:layout_constraintTop_toBottomOf="@+id/fragment_success_title"
+        tools:text="code : 1234567890000" />
 
     <TextView
-        android:id="@+id/resultscan"
+        android:id="@+id/fragment_success_text_view_batchsAndDates"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="sans-serif-condensed-medium"
@@ -44,9 +44,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_success_text_view_title"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_success_title"
         app:layout_constraintVertical_bias="0.115"
-        tools:text="resultat" />
+        tools:text="batchAndDates" />
 
     <Button
         android:id="@+id/fragment_success_button_back_to_scanner"

@@ -17,14 +17,22 @@ class SuccessFragment : Fragment() {
 
         val safeArgs: SuccessFragmentArgs by navArgs()
         val code = safeArgs.code
-        val verdict = safeArgs.result
+        val matchedProductList = ProductList.getInstance(requireContext()).searchProduct(code)
 
+        v.fragment_success_title
         v.fragment_success_text_view_code.text = code
 
-        if(verdict == true)
-            v.resultscan.text = "le produit contient de l'oxyde d'ethylene"
-        else
-            v.resultscan.text = "produit non contamine"
+        if(matchedProductList.isNotEmpty()) {
+            v.fragment_success_title.text = matchedProductList[0].label
+            v.fragment_success_text_view_batchsAndDates.text =
+                matchedProductList.joinToString("\n") {
+                        p -> p.batch + " : " + p.endDate
+                }
+        }
+        else {
+            v.fragment_success_title.text = "inconnu"
+            v.fragment_success_text_view_batchsAndDates.text = "code non référencé dans la liste des produits intoxiqués"
+        }
 
         v.fragment_success_button_back_to_scanner.setOnClickListener {
             findNavController().navigateUp()

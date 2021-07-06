@@ -17,12 +17,12 @@ class ScanBarcodeViewModel : ViewModel() {
         _progressState.value = false
     }
 
-    fun searchBarcode(barcode: String, res:Boolean) {
-
+    fun searchBarcode(barcode: String)
+    {
         _progressState.value = true
         viewModelScope.launch {
             delay(1000)
-            _navigation.value = ScanBarcodeFragmentDirections.scanDestinationToSuccessDestination(barcode,res)
+            _navigation.value = ScanBarcodeFragmentDirections.scanDestinationToSuccessDestination(barcode)
             _progressState.value = false
         }
     }
