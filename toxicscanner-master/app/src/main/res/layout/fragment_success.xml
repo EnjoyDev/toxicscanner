@@ -6,57 +6,51 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E9EBFF">
+
     <TextView
-        android:id="@+id/fragment_success_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:id="@+id/fragment_success_text_view_title"
+        android:layout_width="309dp"
+        android:layout_height="79dp"
         android:fontFamily="sans-serif-light"
         android:text="@string/success_title"
+        android:textAlignment="center"
         android:textColor="#2d2d2d"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_detailScrollView"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_success_text_view_code"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_chainStyle="packed" />
-    <ScrollView
-        android:id="@+id/fragment_detailScrollView"
+
+    <TextView
+        android:id="@+id/fragment_success_text_view_code"
+        android:layout_width="264dp"
+        android:layout_height="133dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fragment_success_title"
-        app:layout_constraintBottom_toTopOf="@+id/fragment_success_button_back_to_scanner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-        <TextView
-            android:id="@+id/fragment_success_text_view_code"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="28sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            android:text="code : 1234567890000" />
-        <TextView
-            android:id="@+id/fragment_success_text_view_batchsAndDates"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-condensed-medium"
-            android:textColor="?attr/colorPrimary"
-            android:textSize="28sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/fragment_success_title"
-            app:layout_constraintVertical_bias="0.115"
-            android:text="batchAndDates" />
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/fragment_success_text_view_title"
+        tools:text="1234567890000" />
+
+    <TextView
+        android:id="@+id/resultscan"
+        android:layout_width="306dp"
+        android:layout_height="129dp"
+        android:fontFamily="sans-serif-condensed-medium"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragment_success_text_view_code"
+        app:layout_constraintVertical_bias="0.115"
+        tools:text="resultat" />
+
     <Button
         android:id="@+id/fragment_success_button_back_to_scanner"
         android:layout_width="wrap_content"
@@ -64,7 +58,6 @@
         android:layout_marginBottom="8dp"
         android:text="@string/back_to_scanner"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@id/fragment_detailScrollView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
