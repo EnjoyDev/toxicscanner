@@ -1,5 +1,6 @@
 package com.blackfrogweb.toxicscanner
 
+import android.graphics.Color
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import kotlinx.android.synthetic.main.fragment_success.view.*
-
 
 class SuccessFragment : Fragment() {
 
@@ -23,14 +23,16 @@ class SuccessFragment : Fragment() {
         v.fragment_success_text_view_code.text = code
 
         if(matchedProductList.isNotEmpty()) {
-            v.fragment_success_title.text = matchedProductList[0].label
+            v.setBackgroundColor(Color.RED)
+            v.fragment_success_title.text =  "AVIS DE RAPPEL SUR LE PRODUIT : " + matchedProductList[0].label
             v.fragment_success_text_view_batchsAndDates.text =
                 matchedProductList.joinToString("\n") {
                         p -> p.batch + " : " + p.endDate
                 }
         }
         else {
-            v.fragment_success_title.text = "inconnu"
+            v.setBackgroundColor(Color.GREEN)
+            v.fragment_success_title.text = "Produit non concerné"
             v.fragment_success_text_view_batchsAndDates.text = "code non référencé dans la liste des produits intoxiqués"
         }
 

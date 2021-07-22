@@ -67,8 +67,6 @@ class ScanBarcodeFragment : Fragment() {
         return v
     }
 
-
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (allPermissionsGranted()) {
@@ -165,6 +163,4 @@ class ScanBarcodeFragment : Fragment() {
         private val REQUIRED_PERMISSIONS = arrayOf(CAMERA)
         private const val REQUEST_CODE_PERMISSIONS = 10
     }
-
-
 }
